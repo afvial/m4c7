@@ -15,10 +15,44 @@ console.log(typeof undefined);
 ```
 
 * **Boolean:** representa un valor lógico y puede tener dos valores, ya sean **true** o **false**.&#x20;
+
+```javascript
+console.log(typeof true);
+
+// boolean
+```
+
 * **Number:** permite representar y manipular valores numéricos como «37» o «-9.25».
+
+```javascript
+console.log(typeof 42);
+
+// number
+```
+
 * **String:** representa datos textuales (cadenas de caracteres).
+
+```javascript
+console.log(typeof 'MZ');
+
+// string
+```
+
 * **BigInt:** representa valores numéricos que son demasiado grandes para ser representados por el tipo de dato **number**.
+
+```javascript
+console.log(typeof 1234567890123456789n);
+
+// bigint
+```
+
 * **Symbol:** es un valor primitivo único e inmutable.
+
+```javascript
+console.log(typeof Symbol(1));
+
+// symbol
+```
 
 #### ¿Cuáles son las tres funciones de String en JS?
 

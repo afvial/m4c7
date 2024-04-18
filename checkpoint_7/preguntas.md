@@ -7,6 +7,13 @@
 Existen seis tipos de datos primitivos, es decir, que no son un objeto. Hay que tener cuidado con este concepto porque JavaScript en muchas situaciones convierte automáticamente los datos primitivos en objetos equivalentes a excepción de **null** y **undefined**.
 
 * **Undefined:** representa una variable que no ha sido declarada o a la cual no se le ha asignado un valor.
+
+```javascript
+console.log(typeof undefined);
+
+// undefined
+```
+
 * **Boolean:** representa un valor lógico y puede tener dos valores, ya sean **true** o **false**.&#x20;
 * **Number:** permite representar y manipular valores numéricos como «37» o «-9.25».
 * **String:** representa datos textuales (cadenas de caracteres).

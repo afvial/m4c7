@@ -1,8 +1,8 @@
 # preguntas
 
-#### ¿Qué diferencia a Javascript de cualquier otro lenguaje de programación?
+### ¿Qué diferencia a Javascript de cualquier otro lenguaje de programación?
 
-#### ¿Cuáles son algunos tipos de datos JS?
+### ¿Cuáles son algunos tipos de datos JS?
 
 Existen seis tipos de datos primitivos, es decir, que no son un objeto. Hay que tener cuidado con este concepto porque JavaScript en muchas situaciones convierte automáticamente los datos primitivos en objetos equivalentes a excepción de **null** y **undefined**.
 
@@ -75,10 +75,43 @@ console.log(typeof function() {});
 
 ### ¿Cuáles son las tres funciones de String en JS?
 
-#### ¿Qué es un condicional?
+#### 1. String.split()
 
-#### ¿Qué es un operador ternario?
+Divide una cadena en un arreglo de subcadenas de la cadena original a partir de un carácter separado.
 
-#### ¿Cuál es la diferencia entre una declaración de función y una expresión de función?
+```javascript
+let cadena = "Hola,mundo,JavaScript";
+console.log(cadena.split(","));
 
-#### ¿Qué es la palabra clave "this" en JS?
+// (3) ['Hola', 'mundo', 'JavaScript']
+```
+
+#### 2. String.substring()
+
+Extrae caracteres desde un índice A hasta un índice B sin incluirlo
+
+```javascript
+let cadena = "Hola";
+console.log(cadena.substring(0,3));
+
+// Hol
+```
+
+#### 3. String.trim()
+
+Elimina espacios en blanco al inicio y al final de una cadena:
+
+```javascript
+let cadena = "   Hola   ";
+console.log(cadena.trim());
+
+// Hola
+```
+
+### ¿Qué es un condicional?
+
+### ¿Qué es un operador ternario?
+
+### ¿Cuál es la diferencia entre una declaración de función y una expresión de función?
+
+### ¿Qué es la palabra clave "this" en JS?

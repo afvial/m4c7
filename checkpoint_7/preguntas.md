@@ -73,7 +73,7 @@ console.log(typeof function() {});
 // function
 ```
 
-### ¿Cuáles son las tres funciones de String en JS?
+## ¿Cuáles son las tres funciones de String en JS?
 
 #### 1. String.split()
 

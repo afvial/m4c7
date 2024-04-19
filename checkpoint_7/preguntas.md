@@ -1,8 +1,8 @@
 # preguntas
 
-### ¿Qué diferencia a Javascript de cualquier otro lenguaje de programación?
+## ¿Qué diferencia a Javascript de cualquier otro lenguaje de programación?
 
-### ¿Cuáles son algunos tipos de datos JS?
+## ¿Cuáles son algunos tipos de datos JS?
 
 Existen seis tipos de datos primitivos, es decir, que no son un objeto. Hay que tener cuidado con este concepto porque JavaScript en muchas situaciones convierte automáticamente los datos primitivos en objetos equivalentes a excepción de **null** y **undefined**.
 
@@ -108,11 +108,11 @@ console.log(cadena.trim());
 // Hola
 ```
 
-### ¿Qué es un condicional?
+## ¿Qué es un condicional?
 
 En el mundo de la programación, a menudo necesitamos que nuestro código tome decisiones basadas en ciertas condiciones. Aquí es donde entra en juego el condicional _if_ en JavaScript.
 
-#### Condicional if.
+### Condicional if.
 
 El condicional _if_ evalúa una expresión y, si esa expresión es verdadera, ejecuta un bloque de código. La estructura básica del condicional _if_ es simple y directa.
 
@@ -126,7 +126,9 @@ El condicional _if_ evalúa una expresión y, si esa expresión es verdadera, ej
 }
 ```
 
-Ejemplos:
+#### Ejemplos:
+
+#### Verificar si un número es mayor que 10.
 
 ```javascript
 let numero = 15;
@@ -137,6 +139,8 @@ if (numero > 10) {
 // El número es mayor que 10.
 ```
 
+#### Verificar si un número es positivo
+
 ```javascript
 let numero = 5;
 if (numero > 0) {
@@ -146,17 +150,109 @@ if (numero > 0) {
 // El número es positivo.
 ```
 
+#### Comprobar si una palabra es "hola"
+
+```javascript
+let palabra = "hola";
+if (palabra === "hola") {
+    console.log("La palabra es hola.");
+}
+
+// La palabre es hola.
+```
+
+
+
+#### Verificar si un estudiante pasó el examen
+
 ```javascript
 let nota = 85;
 if (nota >= 60) {
     console.log("El estudiante pasó el examen.");
 }
 
-
+// El estudiante pasó el examen.
 ```
 
-### ¿Qué es un operador ternario?
+#### Verificar si un número es par o impar
 
-### ¿Cuál es la diferencia entre una declaración de función y una expresión de función?
+<pre class="language-javascript"><code class="lang-javascript"><strong>let numero = 7;
+</strong>if (numero % 2 === 0) {
+    console.log("El número es par.");
+}
 
-### ¿Qué es la palabra clave "this" en JS?
+if (numero % 2 !== 0){
+    console.log("El número es impar.");
+}
+
+// El número es impar.
+</code></pre>
+
+### Condicional if - else.
+
+Imagina que está en una encrucijada y debe tomar una decisión basada en una condición. Si se cumple una condición, tomas el camino de la izquierda; de lo contrario, tomas el camino de la derecha. Esa es precisamente la esencia del condicional _if-else_.
+
+```
+// Sintaxis
+```
+
+```javascript
+ if (condición) {
+    // Código a ejecutar si la condición es verdadera
+    } else {
+    // Código a ejecutar si la condición original es falsa
+    }
+```
+
+#### Ejemplos:
+
+#### Determinar el tipo de suscripción en una plataforma.
+
+<pre class="language-javascript"><code class="lang-javascript">let horasVistas = 50;
+<strong>if (horasVistas > 40) {
+</strong>     console.log("Recomendamos la suscripción Premium.");
+}
+else {
+     console.log("Una suscripción Estándar es suficiente para ti.");
+}
+
+// Recomendamos la suscripción Premium.
+</code></pre>
+
+#### Verificar si un usuario puede acceder a un contenido exclusivo.
+
+```javascript
+let esMiembro = true;
+let tieneCupon = false;
+
+if (esMiembro || tieneCupon) {
+   console.log("¡Puedes acceder al contenido exclusivo!");
+} else {
+   console.log("Lo sentimos, necesitas ser miembro o tener un cupón.");
+}
+
+// ¡Puedes acceder al contenido exclusivo!
+```
+
+#### Determinar el descuento aplicado en una tienda en línea
+
+```javascript
+let esEstudiante = true;
+let esPrimerCompra = false;
+
+if (esEstudiante || esPrimerCompra) {
+    console.log("Tienes un 10% de descuento.");
+} else {
+    console.log("No tienes descuentos disponibles.");
+}
+    
+// Tienes un 10% de descuento.
+```
+
+## ¿Qué es un operador ternario?
+
+
+
+## ¿Cuál es la diferencia entre una declaración de función y una expresión de función?
+
+## ¿Qué es la palabra clave "this" en JS?

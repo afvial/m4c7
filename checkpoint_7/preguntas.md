@@ -251,6 +251,8 @@ if (esEstudiante || esPrimerCompra) {
 
 ## ¿Qué es un operador ternario?
 
+El operador condicional (ternario) es el único **operador en JavaScript** que tiene tres operandos. Este operador se usa con frecuencia como atajo para la instrucción if. Siendo un condicional simple que ejecuta una de dos instrucciones posibles dependiendo de la evaluación previa de una condición.
+
 
 
 ## ¿Cuál es la diferencia entre una declaración de función y una expresión de función?

@@ -253,18 +253,18 @@ if (esEstudiante || esPrimerCompra) {
 
 El operador condicional (ternario) es el único **operador en JavaScript** que tiene tres operandos. Este operador se usa con frecuencia como atajo para la instrucción if. Siendo un condicional simple que ejecuta una de dos instrucciones posibles dependiendo de la evaluación previa de una condición.
 
-**Sintaxis**
+### **Sintaxis**
 
 ```javascript
 condición ? expresión1 : expresión2;
 ```
 
-**Parámetros**
+### **Parámetros**
 
 * **Condición**.- Expresión que se puede evaluar como verdadera o falsa.
 * **Expresión 1 y 2**.- Expresiones con valores definidos que pueden ejecutarse dependiendo de la condición.
 
-**Forma de uso**
+### **Forma de uso**
 
 ```javascript
 variable = expresion ? true_value : false_value;
@@ -272,24 +272,40 @@ variable = expresion ? true_value : false_value;
 
 Esto permite básicamente una asignación condicional a una variable en función de la evaluación de la expresión. Si es cierto, entonces true\_value se asigna a la variable, caso contrario, entonces false\_value se asigna a la variable.
 
-**Ejemplos**
+### **Ejemplos**
 
 ```javascript
+var num1 = 5;
+var num2 = 7;
 var max = ( num1 > num2 ) ? num1 : num2 ;
+
+console.log(max);
+
+// 7
 ```
 
-En este ejemplo es , max para ser asignado el número con el valor más alto . La expresión indica que si num1 es mayor que num2, entonces num1 se asigna a max . Si, sin embargo, la expresión es falsa ( lo que significa que num2 es menor o igual a num1 ), a continuación, num2 se asigna a máx .
+En este ejemplo , `max` es usado para ser asignado al número con el valor más alto . La expresión indica que si `num1` es mayor que `num2`, entonces `num1` se asigna a `max` .  Sin embargo, si la expresión es falsa ( lo que significa que `num2` es mayor o igual a `num1` ), a continuación, `num2` se asigna a `máx` .
 
 ```javascript
 var miEdad = 24;
-var mayorEdad = (miEdad > 18) ? “Sí, eres mayor de edad” : “No, sigue intentando”;
+var mayorEdad = (miEdad > 18) ? "Sí, eres mayor de edad" : "No, sigue intentando";
+
+console.log(mayorEdad);
+
+// Sí, eres mayor de edad
 ```
+
+
 
 En este segundo ejemplo vemos cómo reconocer un dato si es mayor a 18, y asignar a la variable un string, con dos posibilidades.
 
 ```javascript
-var diaFeriado = true;
-“Hoy debo pagar ” + ( diaFeriado ? “19 pesos” : “15 pesos”);
+var diaFeriado = false;
+var pagar = "Hoy debo pagar " + ( diaFeriado ? "19 euros" : "15 euros");
+
+console.log(pagar);
+
+// Hoy debo pagar 15 euros
 ```
 
 En este otro caso evaluamos una expresión booleana, y se obtiene un string el cual posteriormente es concatenado a otro.
@@ -297,19 +313,19 @@ En este otro caso evaluamos una expresión booleana, y se obtiene un string el c
 Podemos usar también el operador ternario con una estructura más larga.
 
 ```javascript
-var a = 11;
-var numeroObtenido = a == 5 ? ‘Cinco’ :
-                    a == 7 ? ‘Siete’:
-                    a == 11 ? ‘Once’:
-                    a == 15 ? ‘Quince’:
-                    'Otro Número;
+var a = 15;
+var numeroObtenido = a == 5 ? "Cinco":
+                    a == 7 ? "Siete":
+                    a == 11 ? "Once":
+                    a == 15 ? "Quince":
+                    "Otro Número";
 
-console.log( numeroObtenido ); // Once
+console.log( numeroObtenido );
+
+// Quince
 ```
 
-En este caso, ampliamos el uso del condicional ternario, donde cuando la primera condición evaluada no es verdadera, optamos por establecer una nueva condición y seguir el ciclo anterior.
-
-
+En este caso, ampliamos el uso del condicional ternario. Cuando la primera condición evaluada no es verdadera, optamos por establecer una nueva condición y seguir el ciclo anterior.
 
 ## ¿Cuál es la diferencia entre una declaración de función y una expresión de función?
 

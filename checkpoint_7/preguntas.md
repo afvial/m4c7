@@ -58,7 +58,20 @@ console.log(typeof Symbol(1));
 
 * **Null:** representa la ausencia intencional de cualquier valor, un valor nulo o «vacío».
 * **Object:** representa una colección de datos definidos y entidades más complejas.
+*
+
+    ```javascript
+    console.log(typeof {});
+
+    //object
+    ```
 * **Function:** es una forma abreviada para funciones, aunque cada constructor de funciones se deriva del constructor **Object**. Son objetos con la capacidad de ser ejecutables.
+
+```javascript
+console.log(typeof function() {});
+
+// function
+```
 
 ### ¿Cuáles son las tres funciones de String en JS?
 

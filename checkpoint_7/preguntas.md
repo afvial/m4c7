@@ -54,7 +54,13 @@ console.log(typeof Symbol(1));
 // symbol
 ```
 
-#### ¿Cuáles son las tres funciones de String en JS?
+#### Otros tipos de datos de JavaScript
+
+* **Null:** representa la ausencia intencional de cualquier valor, un valor nulo o «vacío».
+* **Object:** representa una colección de datos definidos y entidades más complejas.
+* **Function:** es una forma abreviada para funciones, aunque cada constructor de funciones se deriva del constructor **Object**. Son objetos con la capacidad de ser ejecutables.
+
+### ¿Cuáles son las tres funciones de String en JS?
 
 #### ¿Qué es un condicional?
 

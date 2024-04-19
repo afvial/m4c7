@@ -110,6 +110,51 @@ console.log(cadena.trim());
 
 ### ¿Qué es un condicional?
 
+En el mundo de la programación, a menudo necesitamos que nuestro código tome decisiones basadas en ciertas condiciones. Aquí es donde entra en juego el condicional _if_ en JavaScript.
+
+#### Condicional if.
+
+El condicional _if_ evalúa una expresión y, si esa expresión es verdadera, ejecuta un bloque de código. La estructura básica del condicional _if_ es simple y directa.
+
+```
+// Sintaxis
+```
+
+```javascript
+/if (condición) {
+    // Código a ejecutar si la condición es verdadera
+}
+```
+
+Ejemplos:
+
+```javascript
+let numero = 15;
+if (numero > 10) {
+    console.log("El número es mayor que 10.");
+}
+
+// El número es mayor que 10.
+```
+
+```javascript
+let numero = 5;
+if (numero > 0) {
+    console.log("El número es positivo.");
+}
+
+// El número es positivo.
+```
+
+```javascript
+let nota = 85;
+if (nota >= 60) {
+    console.log("El estudiante pasó el examen.");
+}
+
+
+```
+
 ### ¿Qué es un operador ternario?
 
 ### ¿Cuál es la diferencia entre una declaración de función y una expresión de función?

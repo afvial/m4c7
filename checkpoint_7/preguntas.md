@@ -2,6 +2,58 @@
 
 ## ¿Qué diferencia a Javascript de cualquier otro lenguaje de programación?
 
+### ¿Qué es JavaScript?
+
+JavaScript es un lenguaje de programación, de secuencias de comandos, capaz de aportar soluciones eficaces en la mayoría de los ámbitos de la tecnología. Te permite crear contenido de actualización dinámica, controlar multimedia, animar imágenes, etc.
+
+### ¿Para qué se utiliza JavaScript?
+
+Los usos más importantes de JavaScript son los siguientes:
+
+* Desarrollo de sitios web del lado del cliente (front end, en el navegador).
+* Desarrollo de aplicaciones para dispositivos móviles, híbridas o que compilan a nativo.
+* Construcción de servidores web y aplicaciones de servidor.
+* Desarrollo de aplicaciones de escritorio para sistemas Windows, Linux y Mac.
+* Desarrollo de juegos.
+
+### JavaScript: características y beneficios
+
+* **Simplicidad:** Posee una estructura sencilla que lo vuelve más fácil de aprender e implementar.&#x20;
+* **Velocidad:** Se ejecuta más rápido que otros lenguajes y favorece la detección de los errores.
+* **Versatilidad:** Es compatible con otros lenguajes, como: PHP y Java. Además, hace que la ciencia de datos y el aprendizaje automático sean accesibles.
+* **Popularida:** Existen numerosos recursos y foros disponibles para ayudar a los principiantes con habilidades y conocimientos limitados.
+* **Carga del servidor**: La validación de datos puede realizarse a través del navegador web y las actualizaciones solo se aplican a ciertas secciones de la página web.
+* **Actualizaciones:** Se actualiza de forma continua con nuevos frameworks y librerías, esto le asegura relevancia dentro del sector.
+
+### ¿Cuáles son las desventajas de JavaScript?
+
+* **Compatibilidad con los navegadores:** Los diferentes navegadores web interpretan el código JavaScript de forma distinta. Por lo tanto, necesitarás probarlo en todos los navegadores populares, incluyendo las versiones más antiguas.
+* **Depuración:** Aunque algunos editores de HTML admiten la depuración, son menos eficaces que otros editores. Encontrar el problema puede ser un reto, ya que los navegadores no muestran ninguna advertencia sobre los errores.
+
+### Principales diferencias entre JavaScript y Java.
+
+En un artículo anterior, ya te contamos acerca del lenguaje de programación Java. Aquí aprovechamos para descubrirte las diferencias que tiene con JavaScript:
+
+* Java se utiliza para crear aplicaciones en variados dispositivos o en navegadores, mientras que JavaScript se usa principalmente para documentos HTML y navegadores.
+* Tanto Java como JavaScript emplean diferentes complementos. Incluso las extensiones de archivo son distintas, siendo Java «.Java» y JavaScript «.js».
+* Java es un lenguaje compilado e interpretado, mientras que los códigos JavaScript son ejecutados directamente por un navegador.
+* Java es un lenguaje de programación multiplataforma orientado a objetos y centrado en la red, mientras que JavaScript es un lenguaje de secuencias de comandos que permite a los desarrolladores crear páginas web interactivas.
+* La sintaxis de Java requiere que se declaren los tipos de datos, mientras que la sintaxis de JavaScript no necesita esto. Además, Java es un lenguaje estático y JavaScript es dinámico.
+* JavaScript se depura en una fase y Java en dos. JavaScript hace que el código trabaje informando de los errores que se producen a medida que se está ejecutando. Java primero realiza la fase de compilación, y el compilador indica los posibles errores de sintaxis presentes en nuestro código. Después, se ejecuta el programa, y pueden surgir errores para ser depurados.
+* Java posee variables definidas que no se pueden cambiar y es más complejo, JavaScript puede ser cambiante, dándole flexibilidad, y es más sencillo.
+
+### Diferencias más marcadas entre JavaScript y Python.
+
+&#x20;¿Cuáles son realmente las diferencias más relevantes entre ambos lenguajes de programación? A continuación presentamos algunas de las que más se resaltan.
+
+* Python se concibió como idea a finales de los 80’s y su primera versión fue lanzada en 1991, JavaScript por otra parte vino un poco después, su primera versión llegó por allá en 1995. Por tanto, Python es un poco más antiguo.
+* En Python, existen diferentes tipos numéricos como int, float, etc. Mientras que en JavaScript solo hay números de punto flotante.
+* En los últimos años, Python ha superado en popularidad a JavaScript.
+* **Sintaxis:** JavaScript utiliza llaves `{}` y puntos y comas `;` para separar declaraciones y bloques de código. Python utiliza indentación (espacios en blanco) para definir bloques de código, lo que lo hace más fácil de leer y mantener.
+* **Ambiente de ejecución:** JavaScript es ejecutado principalmente en navegadores web y también puede ser utilizado en el lado del servidor a través de Node.js. Python se puede utilizar en una amplia variedad de entornos, incluidos servidores web, scripts, aplicaciones de escritorio, análisis de datos y más.
+* **Tipado:** JavaScript es un lenguaje de tipado débil y dinámico, lo que significa que las variables pueden cambiar de tipo durante la ejecución y no requieren una declaración de tipo explícita. Python es un lenguaje de tipado fuerte y dinámico, lo que significa que las variables están asociadas con un tipo específico y se requiere una declaración de tipo explícita.
+* JavaScript es un lenguaje de programación interpretado y orientado a eventos, diseñado para su uso principalmente en navegadores web. Python es un lenguaje de programación interpretado, multipropósito y general, utilizado en diversas aplicaciones, desde desarrollo web hasta ciencia de datos.
+
 ## ¿Cuáles son algunos tipos de datos JS?
 
 Existen seis tipos de datos primitivos, es decir, que no son un objeto. Hay que tener cuidado con este concepto porque JavaScript en muchas situaciones convierte automáticamente los datos primitivos en objetos equivalentes a excepción de **null** y **undefined**.

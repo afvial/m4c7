@@ -381,4 +381,50 @@ En este caso, ampliamos el uso del condicional ternario. Cuando la primera condi
 
 ## ¿Cuál es la diferencia entre una declaración de función y una expresión de función?
 
+Veremos las diferencias de sintaxis y prácticas de ambas a través de un pequeño ejemplo.
+
+Un ejemplo de **declaración de función** es el siguiente:
+
+```javascript
+function sum(a,b) {
+   return a + b;
+}
+```
+
+Se caracteriza por el hecho de que la **declaración de una función la hace disponible para todo el programa**, incluyendo el código que está antes de la declaración de la función.&#x20;
+
+```javascript
+var add = sum(3,2);
+ 
+function sum(a,b) {
+   return a + b;
+}
+
+console.log(add);
+
+// 5
+```
+
+Una **expresión con una función** es:
+
+```javascript
+var sum = function(a,b) {
+   return a + b;
+};
+```
+
+En este caso, estamos declarando un función y asignándosela a una variable. Es similar a declarar una expresión lambda en Pyhton. No es posible referenciarla antes de la expresión, porque realmente no se trata de una función declarada, sino del valor asignado a una variable y, por tanto, **hasta que no se defina la variable no se puede utilizar**.
+
+```javascript
+var sum = function(a,b) {
+    return a + b;
+ };
+
+ console.log(sum(4,2));
+ 
+ // 6
+```
+
+Una diferencia más. En el segundo caso (usar una función en una expresión) es necesario terminar la expresión con un punto y coma (`;`), igual que cualquier otra expresión.
+
 ## ¿Qué es la palabra clave "this" en JS?

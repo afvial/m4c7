@@ -428,3 +428,38 @@ var sum = function(a,b) {
 Una diferencia más. En el segundo caso (usar una función en una expresión) es necesario terminar la expresión con un punto y coma (`;`), igual que cualquier otra expresión.
 
 ## ¿Qué es la palabra clave "this" en JS?
+
+### ¿Qué es la palabra clave THIS? <a href="#clave" id="clave"></a>
+
+Bien, comencemos definiendo que es la palabra clave`this`. En JavaScript, la palabra clave `this` siempre se refiere a un **objeto**. Lo que pasa es que el objeto al que se refiere variará dependiendo de cómo y dónde se llame `this`.
+
+Hay algunas formas diferentes de usar la palabra clave `this`, así que veamos los casos más comunes y cómo se comporta en cada uno de ellos.
+
+Un comentario importante es que `this` **no** es una variable, es una palabra clave, por lo que su valor no se puede cambiar ni reasignar.
+
+### Cómo llamar a this por sí mismo <a href="#llamar" id="llamar"></a>
+
+Si llamamos a `this`por sí mismo, es decir, no dentro de una función, objeto o lo que sea, se referirá al objeto de ventana global.
+
+Si lo imprimes como `console.log('this alone', this);`obtendrás esto en tu consola: `[object Window]`.
+
+```javascript
+console.log('this alone', this);
+```
+
+### Cómo llamar a \`this\` en un método de objeto <a href="#objeto" id="objeto"></a>
+
+Pero si llamamos a `this`dentro de un método de objeto, como en el siguiente ejemplo:
+
+```javascript
+const person = {
+    firstName: "John",
+    lastName : "Doe",
+    id       : 5566,
+    getThis : function() {
+      return this;
+    }
+};
+
+console.log('this in object method', person.getThis());
+```

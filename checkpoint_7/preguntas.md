@@ -1,4 +1,4 @@
-# preguntas.md
+# Preguntas.md
 
 ## ¿Qué diferencia a Javascript de cualquier otro lenguaje de programación?
 

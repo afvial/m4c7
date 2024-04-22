@@ -1,4 +1,4 @@
-# Preguntas
+# preguntas.md
 
 ## ¿Qué diferencia a Javascript de cualquier otro lenguaje de programación?
 
@@ -429,37 +429,114 @@ Una diferencia más. En el segundo caso (usar una función en una expresión) es
 
 ## ¿Qué es la palabra clave "this" en JS?
 
-### ¿Qué es la palabra clave THIS? <a href="#clave" id="clave"></a>
+### ¿Qué es el `this`? <a href="#que-es-el-this" id="que-es-el-this"></a>
 
-Bien, comencemos definiendo que es la palabra clave`this`. En JavaScript, la palabra clave `this` siempre se refiere a un **objeto**. Lo que pasa es que el objeto al que se refiere variará dependiendo de cómo y dónde se llame `this`.
+Es una palabra reservada en JavaScript que podemos utilizar para referirnos al contexto en el que se invoca, por lo que su valor implícito puede variar durante la ejecución del código.
 
-Hay algunas formas diferentes de usar la palabra clave `this`, así que veamos los casos más comunes y cómo se comporta en cada uno de ellos.
+### `this` en el contexto global <a href="#this-en-el-contexto-global" id="this-en-el-contexto-global"></a>
 
-Un comentario importante es que `this` **no** es una variable, es una palabra clave, por lo que su valor no se puede cambiar ni reasignar.
+Decimos que el contexto global es todo lo que se encuentra fuera de cualquier bloque de código.
 
-### Cómo llamar a this por sí mismo <a href="#llamar" id="llamar"></a>
-
-Si llamamos a `this`por sí mismo, es decir, no dentro de una función, objeto o lo que sea, se referirá al objeto de ventana global.
-
-Si lo imprimes como `console.log('this alone', this);`obtendrás esto en tu consola: `[object Window]`.
+En este caso, `this` siempre hace referencia al objeto global:
 
 ```javascript
-console.log('this alone', this);
+console.log(this === window);
+
+// true
 ```
 
-### Cómo llamar a \`this\` en un método de objeto <a href="#objeto" id="objeto"></a>
+```javascript
+this.awesomeNumber = 37
+console.log(awesomeNumber)
 
-Pero si llamamos a `this`dentro de un método de objeto, como en el siguiente ejemplo:
+// 37
+```
+
+### `this` en el contexto de una función <a href="#this-en-el-contexto-de-una-funcion" id="this-en-el-contexto-de-una-funcion"></a>
+
+Si invocamos `this` dentro de una función, su valor cambia dependiendo de cómo ejecutamos la función.
+
+#### Llamada simple <a href="#llamada-simple" id="llamada-simple"></a>
+
+Si es una llamada simple y no está en modo estricto, `this` devuelve el objeto global.
 
 ```javascript
-const person = {
-    firstName: "John",
-    lastName : "Doe",
-    id       : 5566,
-    getThis : function() {
-      return this;
-    }
-};
+function whoIsThis() {
+  return this
+}
 
-console.log('this in object method', person.getThis());
+console.log(whoIsThis() === window)
+
+// true
+```
+
+#### Llamada simple (modo estricto) <a href="#llamada-simple-modo-estricto" id="llamada-simple-modo-estricto"></a>
+
+Si es una llamada simple y está en modo estricto, `this` conserva el valor que haya recibido antes de la ejecución de la función, y devuelve `undefined` si no ha recibido ninguno.
+
+```javascript
+function whoIsThis() {
+  'use strict'
+  return this
+}
+
+console.log(whoIsThis())
+
+// undefined
+```
+
+#### Como método de objeto <a href="#como-metodo-de-objeto" id="como-metodo-de-objeto"></a>
+
+Si la función es el método de un objeto y se invoca como tal, `this` es el objeto en sí mismo.
+
+```javascript
+const me = {
+  name: 'Carlos Reyes',
+  sayMyName() {
+    return this.name
+  },
+}
+
+console.log(me.sayMyName())
+
+// 'Carlos Reyes'
+```
+
+#### Función asignada como método de un objeto <a href="#funcion-asignada-como-metodo-de-un-objeto" id="funcion-asignada-como-metodo-de-un-objeto"></a>
+
+Cuando se define una función y luego se asigna como método de un objeto, `this` dentro de la función se refiere al objeto al que se ha asignado la función.
+
+```javascript
+function sayHello() {
+  console.log(`Hola, soy ${this.name}.`)
+}
+
+const person = {
+  name: 'Juan',
+  greet: sayHello, // asignamos 'sayHello' a la propiedad 'greet'
+}
+
+person.greet()
+
+// Hola, soy Juan.
+```
+
+#### Función asignada como método de un objeto anidado <a href="#funcion-asignada-como-metodo-de-un-objeto-anidado" id="funcion-asignada-como-metodo-de-un-objeto-anidado"></a>
+
+Cuando se define una función y se asigna como propiedad de un objeto más anidado, `this` dentro de la función se refiere al objeto más inmediato que contiene la función como propiedad.
+
+```javascript
+const myObj = {
+  myMethod: function () {
+    console.log(this)
+  },
+  nestedObj: {
+    nestedMethod: myObj.myMethod,
+  },
+}
+
+myObj.myMethod() // Imprime el objeto myObj
+myObj.nestedObj.nestedMethod()
+
+// Imprime el objeto nestedObj
 ```
